@@ -21,10 +21,12 @@
     #CLI
     pkgs.github-cli
     pkgs.lazygit
+    pkgs.disfetch
+    pkgs.nerdfetch
 
     #APP
     pkgs.blanket
-    pkgs.disfetch
+    pkgs.renpy
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
