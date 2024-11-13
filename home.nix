@@ -18,8 +18,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    
+    #CLI
     pkgs.github-cli
+    pkgs.lazygit
+
+    #APP
+    pkgs.blanket
     
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -45,7 +49,7 @@
     ".config/gh/config.yml".text = ''
         version: '1'
         aliases:
-        as: auth status
+          as: auth status
     '';
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -58,6 +62,16 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
+
+ 
+  #programs.fzf = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #  
+  #};
+  #programs.zsh = {
+  #  enable = true;
+  #};
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
