@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of zaryu";
+  description = "Home Manager configuration of hyprzaryu";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
