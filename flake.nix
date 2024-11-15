@@ -7,6 +7,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     };
   };
 
@@ -22,7 +23,9 @@
         # the path to your home.nix.
         modules = [ 
           ./home.nix
-          ./CyberApp/cyberapp.nix
+          ./CyberApp/cyberapp.ni
+          ./App/hyprpanel-system
+          ./App/hyprpanel-program
         ];
 
         # Optionally use extraSpecialArgs
