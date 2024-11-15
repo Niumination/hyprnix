@@ -18,7 +18,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   
-  Imports = [
+  imports = [
 
   #scripts
   ./App/hyprpanel-program/default.nix
@@ -117,5 +117,5 @@
   programs.home-manager.enable = true;
 
   # Import my profile picture, used by the hyprpanel dashboard
-  file.".profile_picture.png" = { source = ./profile_picture.png; };
+  file.".profile_picture.png" = { source = ./App/profile_picture.png; };
 }
