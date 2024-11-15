@@ -17,15 +17,31 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  
+  Imports = [
+
+  #scripts
+  ./App/hyprpanel-program/default.nix
+
+  #system
+  ./App/hyprpanel-system/default.nix
+
+  ]
+
+
+
+  home.packages = with pkgs; [
     #CLI
-    pkgs.github-cli
-    pkgs.lazygit
-    pkgs.disfetch
-    pkgs.nerdfetch
+    github-cli
+    lazygit
+    disfetch
+    nerdfetch
 
     #APP
-    pkgs.blanket
+    blanket
+
+    # Bahan Hyprland
+    hyprpanel    
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

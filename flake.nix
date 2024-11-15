@@ -7,11 +7,10 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, hyprpanel, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -24,8 +23,8 @@
         modules = [ 
           ./home.nix
           ./CyberApp/cyberapp.ni
-          ./App/hyprpanel-system
-          ./App/hyprpanel-program
+          #./App/hyprpanel-system
+          #./App/hyprpanel-program
         ];
 
         # Optionally use extraSpecialArgs
