@@ -30,18 +30,18 @@
 
 
 
-  home.packages = with pkgs; [
+  home.packages = [
     #CLI
-    github-cli
-    lazygit
-    disfetch
-    nerdfetch
+    pkgs.github-cli
+    pkgs.lazygit
+    pkgs.disfetch
+    pkgs.nerdfetch
 
     #APP
-    blanket
+    pkgs.blanket
 
     # Bahan Hyprland
-    hyprpanel    
+    pkgs.hyprpanel    
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
