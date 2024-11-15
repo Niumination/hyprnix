@@ -26,7 +26,7 @@
   #system
   ./App/hyprpanel-system/default.nix
 
-  ]
+  ];
 
 
 

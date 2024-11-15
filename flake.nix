@@ -22,7 +22,7 @@
         # the path to your home.nix.
         modules = [ 
           ./home.nix
-          ./CyberApp/cyberapp.ni
+          ./CyberApp/cyberapp.nix
           #./App/hyprpanel-system
           #./App/hyprpanel-program
         ];
