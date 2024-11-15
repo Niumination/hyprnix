@@ -99,4 +99,7 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Import my profile picture, used by the hyprpanel dashboard
+  file.".profile_picture.png" = { source = ./profile_picture.png; };
 }
