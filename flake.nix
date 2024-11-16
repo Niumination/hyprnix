@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # add arg
-    ags.url = "github:aylurs/ags/v1";
+    ags.url = "github:Aylur/ags/v1";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
