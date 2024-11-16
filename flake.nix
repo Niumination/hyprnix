@@ -8,11 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # add arg
-    #ags.url = "github:Aylur/ags/v1";
-
-    # add hyprpanel
-    #hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -21,7 +16,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."hyprzaryu" = home-manager.lib.homeManagerConfiguration {
-        #inherit pkgs;
         pkgs = import nixpkgs { inherit system; };
 
         extraSpecialArgs = { inherit inputs; };
@@ -31,9 +25,6 @@
         modules = [ 
           ./home.nix
           ./CyberApp/cyberapp.nix
-          ./App/hyprpanel-flake.nix
-          #{nixpkgs.overlays = [inputs.hyprpanel.overlay]}
-          
         ];
 
       };

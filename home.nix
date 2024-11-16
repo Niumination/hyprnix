@@ -17,23 +17,11 @@
 
       blanket
 
-      #ags
-      #gtksourceview
-      #webkitgtk
-      #accountsservice
-
     ];
 
   };
 
   nixpkgs.config.allowUnfree = true;
-
-
-  #imports = [
-  #  ./App/hyprpanel-program/default.nix
-  #  ./App/hyprpanel-system/default.nix
-  #];
-
 
   home.file = {
     ".config/gh/config.yml".text = ''
