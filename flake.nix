@@ -28,12 +28,8 @@
         modules = [ 
           ./home.nix
           ./CyberApp/cyberapp.nix
-          #./App/hyprpanel-system
-          #./App/hyprpanel-program
         ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
     };
 }
