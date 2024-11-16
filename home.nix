@@ -26,22 +26,62 @@
   #system
   ./App/hyprpanel-system/default.nix
 
+  # ags
+  inputs.ags.homeManagerModules.default
+
   ];
 
+  programs.ags = {
+      enable = true;
+
+      extraPackages = with pkgs; [
+        gtksourceview
+        webkitgtk
+        accountsservice
+      ];
+      
+    };
+
+  home = {
+    #inherit (config.var) username;
+    #homeDirectory = "/home/zaryu/" + config.var.username;
+
+    packages = with pkgs; [
+      github-cli
+      lazygit
+      disfetch
+      nerdfetch
+      
+
+      blanket
+
+    ];
+
+    file.".profile_picture.png" = { source = ./profile_picture.png; };
+  };
 
 
-  home.packages = [
+
+
+
+
+
+
+
+
+
+#home.packages = [
     #CLI
-    pkgs.github-cli
-    pkgs.lazygit
-    pkgs.disfetch
-    pkgs.nerdfetch
+#    pkgs.github-cli
+#    pkgs.lazygit
+#    pkgs.disfetch
+#    pkgs.nerdfetch
 
     #APP
-    pkgs.blanket
+#    pkgs.blanket
 
     # Bahan Hyprland
-    pkgs.hyprpanel    
+#    pkgs.hyprpanel    
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -59,7 +99,10 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  ];
+
+    # Import my profile picture, used by the hyprpanel dashboard
+    #file.".profile_picture.png" = { source = ./profile_picture.png; };
+#];
   
   nixpkgs.config.allowUnfree = true;
 
@@ -116,6 +159,5 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Import my profile picture, used by the hyprpanel dashboard
-  file.".profile_picture.png" = { source = ./profile_picture.png; };
+
 }
