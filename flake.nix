@@ -9,7 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # add arg
-    ags.url = "github:Aylur/ags/v1";
+    #ags.url = "github:Aylur/ags/v1";
+
+    # add hyprpanel
+    #hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -28,6 +31,9 @@
         modules = [ 
           ./home.nix
           ./CyberApp/cyberapp.nix
+          ./App/hyprpanel-flake.nix
+          #{nixpkgs.overlays = [inputs.hyprpanel.overlay]}
+          
         ];
 
       };
