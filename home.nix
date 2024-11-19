@@ -14,6 +14,7 @@
       lazygit
       disfetch
       nerdfetch
+      gitfetch
 
       blanket
 
