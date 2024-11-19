@@ -14,8 +14,8 @@
       lazygit
       disfetch
       nerdfetch
-      fetchgit
 
+      #Apps
       blanket
 
     ];
