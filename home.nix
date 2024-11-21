@@ -17,6 +17,7 @@
 
       #Apps
       blanket
+      mpv
 
     ];
 
