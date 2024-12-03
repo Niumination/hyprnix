@@ -18,6 +18,13 @@
       #Apps
       blanket
       mpv
+      github-desktop
+
+      #CLI/TUI
+      yazi #file manager cli
+
+      #Hyprland
+      pyprland
 
     ];
 
