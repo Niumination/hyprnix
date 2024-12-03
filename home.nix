@@ -11,7 +11,6 @@
 
     packages = with pkgs; [
       github-cli
-      lazygit
       disfetch
       nerdfetch
 
