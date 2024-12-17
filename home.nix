@@ -11,20 +11,21 @@
 
     packages = with pkgs; [
       github-cli
-      lazygit
-      disfetch
       nerdfetch
+  
 
       #Apps
       blanket
       mpv
       github-desktop
+            
 
       #CLI/TUI
       yazi #file manager cli
 
       #Hyprland
       pyprland
+      
 
     ];
 
@@ -44,6 +45,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
 
   programs.home-manager.enable = true;
 }
