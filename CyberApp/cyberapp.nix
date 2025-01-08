@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [
-    #Wireless Attacking
-    pkgs.aircrack-ng
-    pkgs.wifite2   
-  ];
-
+  home = {
+  
+    packages = with pkgs; [
+        #Wireless Attacking
+        aircrack-ng
+        wifite2
+        nmap
+        wireshark
+    ];
+  
+  };
 }

@@ -18,6 +18,7 @@
       blanket
       mpv
       github-desktop
+      telegram-desktop
             
 
       #CLI/TUI
@@ -25,8 +26,10 @@
 
       #Hyprland
       pyprland
-      
 
+      #Office
+      wpsoffice
+      
     ];
 
   };
