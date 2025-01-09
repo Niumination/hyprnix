@@ -15,7 +15,6 @@
   
 
       #Apps
-      blanket
       mpv
       github-desktop
       telegram-desktop
@@ -23,6 +22,7 @@
 
       #CLI/TUI
       yazi #file manager cli
+      cmatrix
 
       #Hyprland
       pyprland
