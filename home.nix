@@ -18,7 +18,6 @@
       mpv
       github-desktop
       telegram-desktop
-            
 
       #CLI/TUI
       yazi #file manager cli
