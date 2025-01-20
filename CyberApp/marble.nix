@@ -1,63 +1,15 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    astal = {
-      url = "github:aylur/astal";
+    marble = {
+      url = "github:marble-shell/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    astal,
-  }: let
+  outputs = { self, nixpkgs, marble }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    packages.${system}.default = pkgs.stdenv.mkDerivation {
-      pname = "marble";
-      src = ./marble;
-      dontUnpack = true;
-
-      nativeBuildInputs = with pkgs; [
-        wrapGAppsHook
-        gobject-introspection
-      ];
-
-      buildInputs =
-        (with astal.packages.${system}; [
-          astal3
-          io
-          apps
-          battery
-          bluetooth
-          hyprland
-          mpris
-          network
-          notifd
-          powerprofiles
-          tray
-          wireplumber
-        ])
-        ++ (with pkgs; [
-          gjs
-        ]);
-
-      preFixup = ''
-        gappsWrapperArgs+=(
-          --prefix PATH : ${with pkgs;
-          lib.makeBinPath [
-            dart-sass
-            fzf
-          ]}
-        )
-      '';
-
-      installPhase = ''
-        mkdir -p $out/bin
-        install $src $out/bin/marble
-      '';
-    };
+    packages.${system}.default = marble.packages.${system}.default;
   };
 }
