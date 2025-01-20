@@ -25,6 +25,7 @@
         modules = [ 
           ./home.nix
           ./CyberApp/cyberapp.nix
+          ./CyberApp/marble.nix
         ];
 
       };
