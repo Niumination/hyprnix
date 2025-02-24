@@ -24,7 +24,7 @@
         # the path to your home.nix.
         modules = [ 
           ./home.nix
-          ./CyberApp/cyberapp.nix
+#          ./CyberApp/cyberapp.nix
           
         ];
 
